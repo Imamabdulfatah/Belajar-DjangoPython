@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block app_css %} 
+<link rel="stylesheet" type="text/css" href="{% static "blog/css/style.css" %}"> 
+{% endblock app_css%} 
+
+{% block header %}
+<h1 class="text-left" >{{judul}}</h1>
+<p class="lead text-left">{{subjudul}}</p>
+{% endblock header %}
+
+{% block content-1 %}
+  <div class="raw" style="height: 400px">
+    <h1>Content blog</h1>
+  </div>
+{% endblock content-1 %}
+
+{% block content-2 %}
+  <div class="raw bg-primary" style="height: 400px">
+    <h1>Content blog 2</h1>
+  </div>
+{% endblock content-2 %}
+<!-- lama -->
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{judul}}</title>
+  </head>
+  <body>
+    <img style="width: 100%" src="{% static banner %}" alt="" />
+    <h1>Selamat datang {{judul}}</h1>
+    <h2>kontibutor: {{kontributor}}</h2>
+    <ul>
+      <li><a href="/">home</a></li>
+      <li><a href="/blog">blog</a></li>
+      <li><a href="/about">about</a></li>
+      <li><a href="/blog/cerita">cerita</a></li>
+      <li><a href="/blog/news">news</a></li>
+    </ul>
+  </body>
+</html> -->

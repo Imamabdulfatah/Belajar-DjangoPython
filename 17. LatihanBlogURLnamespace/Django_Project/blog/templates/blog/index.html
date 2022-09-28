@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block Title %}
+  {{Judul}}
+{% endblock Title%}
+
+{% block pageTitle %}
+  {{Judul}}
+{% endblock pageTitle %}
+
+{% block contents %}
+  {{Content}}
+
+  <!-- halaman category -->
+  <ul class="nav">
+
+    <li class="nav-item">
+      <!-- mengambil dari index url blog -->
+      <a class="nav-link" href="{% url "blog:index" %}">
+        ALL post
+      </a>
+    </li>
+
+  {% for dataCategory in Categories %}
+      <li class="nav-item">
+        <!-- dirubah dengan slug -->
+        <a class="nav-link" href="{% url "blog:category" categoryInput=dataCategory.category% }">
+          {{dataCategory.category}}
+        </a>
+      </li>
+  {% endfor %}
+  </ul>
+
+  <!-- slug halaman blog awal -->
+  {% for post in Posts %}
+    <a href="{% url "blog:detail" slugInput=post.slug %}" title="">
+      <h1>{{post.judul}}</h1>
+    </a>
+   
+    <p>{{post.publish}}</p>
+    <p>{{post.body|truncatechars:200}}</p>
+  {% endfor%}
+
+{% endblock contents %}

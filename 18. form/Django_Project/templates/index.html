@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>{{judul}}</title>
+</head>
+<body>
+    <h1>{{heading}}</h1>
+
+    <ul>
+        <li><a href="{% url 'index' %}"></a></li>
+        <li><a href="{% url 'contact:index' %}"></a></li>
+    </ul>
+
+    <!-- form pada python -->
+    <!-- form disini bisa post atau get post memasuakan nilai dan get mendapatkannya -->
+    <form method="post">
+        <!-- sistem keamanan pada python agar tidak memasukan sembarangan -->
+        {% csrf_token %}
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" id="nama">
+        <br>
+        <label for="alamat">Alamat :</label>
+        <input type="text" name="alamat" id="alamat">
+        <button type="submit">Kirim</button>
+
+    </form>
+    <h2>{{nama}}</h2>
+    <h2>{{alamat}}</h2>
+</body>
+</html>
+
+<!-- bisa dilihat kode di klik kanan terus  -->

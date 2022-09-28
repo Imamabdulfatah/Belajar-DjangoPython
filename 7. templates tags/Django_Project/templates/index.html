@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{subjudul}}| imam abdul</title>
+  </head>
+  <body>
+    <h1>Selamat datang di website {{judul}}</h1>
+    <p>website ini dibuat dengan menggunakan Django</p>
+
+    <ul>
+      <!-- templates tag# -->
+      {% for link,name in nav %}
+      <li>
+        <a href="{{link}}">{{name}}</a>
+      </li>
+
+      {% endfor %}
+    </ul>
+  </body>
+</html>

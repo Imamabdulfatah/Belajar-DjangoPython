@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selamat data semuanya di {{judul}}</title>
+  </head>
+  <body>
+    <h1>{{subjudul}} {{judul}}</h1>
+    <h2>home untuk blog</h2>
+    <ul>
+      {% for link,name in nav %}
+      <li>
+        <a href="{{link}}">{{name}}</a>
+      </li>
+
+      {% endfor %}
+    </ul>
+  </body>
+</html>

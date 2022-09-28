@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ judul }}</title>
+    {% include "snippets/styles.html" %} 
+   
+    {% block app_css %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    {% endblock app_css%}
+  </head>
+  <body>
+    {% include "snippets/navbar.html" %}
+
+    <div class="jumbotron jumbotron-fluid mb-3" id="jumbotron" style="background-color: #e3f2fd">
+      <div class="container text-center text-white">{% block header %} {% endblock header %}</div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container bg-white text-dark shadow" style="margin-top: -100px" id="myBody">
+       
+        {% block content-1 %}
+
+        {% endblock content-1 %}
+      </div>
+      <div class="container bg-dark text-white shadow">
+        {% block content-2 %}
+
+        {% endblock content-2 %}
+      </div>
+     
+
+    {% include "snippets/scripts.html" %}
+  </body>
+</html>

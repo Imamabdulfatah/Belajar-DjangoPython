@@ -1,0 +1,10 @@
+#jumbotron {
+    background-image: url("/static/about/img/bannerAbout.png");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+  }
+  
+  .name {
+    margin-left: auto;
+  }

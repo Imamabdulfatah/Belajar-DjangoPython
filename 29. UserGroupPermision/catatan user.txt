@@ -1,0 +1,19 @@
+Usermanagement di django
+
+Auth system terbagi dua
+1. Authentification = ada password management, email, user dan lainya
+- mengatur user type dan subtype
+a. user type  anonymous = hanya membaca artikel biasa untuk umum
+
+b. user type user = biasanya harus login kaya akun facebook, ecommerce dll
+- Superuser = admin (manage semua website bisa dilakukan bisa merubah user lain)
+- staff = hanya bisa merubah 1 buah database dan diri dia sendiri tidak bisa
+        merubah sistem lain
+- Active = seperti user biasa yang sudah login dan verifikasi 
+- inactive = user yang daftar tapi belum verifikasi atau penguna yang sudah 
+memiliki akun tapi sudah keluar dari akun
+
+2. Authorization = permision (create , read, update, delete)
+- bisa apa saja diuser hanya bisa read saja atau delete update untuk Authorization
+
+ini disatukan dengan namanya group managgement
